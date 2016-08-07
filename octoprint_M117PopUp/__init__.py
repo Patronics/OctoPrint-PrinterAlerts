@@ -5,7 +5,6 @@ import octoprint.plugin
 class M117PopUp(octoprint.plugin.AssetPlugin):
 	def AlertM117(self, comm_instance, phase, cmd, cmd_type, gcode, *args, **kwargs):
 		if gcode and gcode.startswith("M117"):
-			self._logger.info(cmd.replace("M117 ",""))
 			self._plugin_manager.send_plugin_message(self._identifier, dict(type="popup", msg=cmd.replace("M117 ","")))
 			
 	def get_assets(self):
