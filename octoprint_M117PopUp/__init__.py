@@ -2,16 +2,21 @@
 
 import octoprint.plugin
 
-class M117PopUp(octoprint.plugin.OctoPrintPlugin,octoprint.plugin.AssetPlugin):
+class M117PopUp(octoprint.plugin.TemplatePlugin,octoprint.plugin.OctoPrintPlugin,octoprint.plugin.AssetPlugin):
 	def AlertM117(self, comm_instance, phase, cmd, cmd_type, gcode, *args, **kwargs):
 		if gcode and gcode.startswith("M117"):
 			self._logger.info(cmd.replace("M117 ",""))
 			self._plugin_manager.send_plugin_message(self._identifier, dict(type="popup", msg=cmd.replace("M117 ","")))
 			
 	def get_assets(self):
-		 return dict(
-			 js=["js/M117PopUp.js"]
+		return dict(
+			js=["js/M117PopUp.js"]
 		 )
+		 
+	def get_template_configs(self):
+		return [dict(type="sidebar",
+			name="M117PopUp",
+			custom_bindings=False)]
 
 __plugin_name__ = "M117PopUp"
 

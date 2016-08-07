@@ -31,6 +31,6 @@ $(function() {
         [],
 
         // Finally, this is the list of selectors for all elements we want this view model to be bound to.
-        ["#navbar"]
+        ["#sidebar_plugin_M117PopUp"]
     ]);
 });
