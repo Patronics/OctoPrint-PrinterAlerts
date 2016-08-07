@@ -11,6 +11,9 @@ class M117PopUp(octoprint.plugin.TemplatePlugin, octoprint.plugin.AssetPlugin):
 	def get_assets(self):
 		return dict(js=["js/M117PopUp.js"])
 		
+	def get_version(self):
+		return self._plugin_version
+		
 	##~~ Softwareupdate hook
 	def get_update_information(self):
 		return dict(
