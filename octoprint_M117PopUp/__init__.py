@@ -16,7 +16,7 @@ class M117PopUp(octoprint.plugin.AssetPlugin):
 	##~~ Softwareupdate hook
 	def get_update_information(self):
 		return dict(
-			growl=dict(
+			M117PopUp=dict(
 				displayName="M117PopUp",
 				displayVersion=self._plugin_version,
 
