@@ -16,7 +16,7 @@ class M117PopUp(octoprint.plugin.AssetPlugin):
 	##~~ Softwareupdate hook
 	def get_update_information(self):
 		return dict(
-			growl=dict(
+			M117PopUp=dict(
 				displayName="M117PopUp",
 				displayVersion=self._plugin_version,
 
@@ -39,5 +39,6 @@ def __plugin_load__():
 
 	global __plugin_hooks__
 	__plugin_hooks__ = {
-		"octoprint.comm.protocol.gcode.queuing": __plugin_implementation__.AlertM117
+		"octoprint.comm.protocol.gcode.queuing": __plugin_implementation__.AlertM117,
+		"octoprint.plugin.softwareupdate.check_config": __plugin_implementation__.get_update_information
 	}
