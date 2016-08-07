@@ -4,15 +4,16 @@ $(function() {
 
 		self.onDataUpdaterPluginMessage = function(plugin, data) {
             if (plugin != "M117PopUp") {
-				console.log('Ignoring '+plugin);
+				// console.log('Ignoring '+plugin);
                 return;
             }
 			
 			if(data.type == "popup") {
-				console.log(data.msg);
+				// console.log(data.msg);
 				new PNotify({
 					title: 'M117 Pop Up Message',
-					text: data.msg
+					text: data.msg,
+					type: 'info'
 					});
 			}
 		}
