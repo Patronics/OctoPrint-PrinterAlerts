@@ -4,7 +4,7 @@ Octoprint plugin to send M117 gcode messages to OctoPrint's built in alerting sy
 
 Note: this plugin does NOT work with files on the SD card.
 
-![screenshot](screenshot_1.png)
+![screenshot](screenshot.png)
 
 
 ###Setup
