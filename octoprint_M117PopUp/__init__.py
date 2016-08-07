@@ -39,5 +39,6 @@ def __plugin_load__():
 
 	global __plugin_hooks__
 	__plugin_hooks__ = {
-		"octoprint.comm.protocol.gcode.queuing": __plugin_implementation__.AlertM117
+		"octoprint.comm.protocol.gcode.queuing": __plugin_implementation__.AlertM117,
+		"octoprint.plugin.softwareupdate.check_config": __plugin_implementation__.get_update_information
 	}
