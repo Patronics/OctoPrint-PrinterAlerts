@@ -1,11 +1,12 @@
 # coding=utf-8
 
 import octoprint.plugin
+import re
 
 class M117PopUp(octoprint.plugin.AssetPlugin):
 	def AlertM117(self, comm_instance, phase, cmd, cmd_type, gcode, *args, **kwargs):
 		if gcode and cmd.startswith("M117"):
-			self._plugin_manager.send_plugin_message(self._identifier, dict(type="popup", msg=cmd.replace("M117 ","")))
+			self._plugin_manager.send_plugin_message(self._identifier, dict(type="popup", msg=re.sub(r'^M117\s?', '', cmd)))
 			return
 			
 	def get_assets(self):
