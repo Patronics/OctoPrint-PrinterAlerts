@@ -32,8 +32,8 @@ $(function() {
 				new PNotify({
 					title: 'M117 Pop Up Message',
 					text: data.msg,
-					type: self.settingsViewModel.settings.plugins.M117PopUp.msgType();
-					hide: self.settingsViewModel.settings.plugins.M117PopUp.autoClose();
+					type: self.settingsViewModel.settings.plugins.M117PopUp.msgType(),
+					hide: self.settingsViewModel.settings.plugins.M117PopUp.autoClose()
 					});
 			}
 		}
