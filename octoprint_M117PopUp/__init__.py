@@ -4,7 +4,7 @@ import octoprint.plugin
 import re
 
 class M117PopUp(octoprint.plugin.AssetPlugin,
-				 octoprint.plugin.TemplatePlugin):
+				octoprint.plugin.TemplatePlugin):
 	def AlertM117(self, comm_instance, phase, cmd, cmd_type, gcode, *args, **kwargs):
 		if gcode and cmd.startswith("M117"):
 			self._plugin_manager.send_plugin_message(self._identifier, dict(type="popup", msg=re.sub(r'^M117\s?', '', cmd)))
@@ -15,6 +15,13 @@ class M117PopUp(octoprint.plugin.AssetPlugin,
 		
 	def get_version(self):
 		return self._plugin_version
+		
+	##-- Template hooks
+	def get_settings_defaults(self):
+		return dict(msgType="notice",autoClose=true)	
+	
+	def get_template_configs(self):
+		return [dict(type="settings",custom_bindings=True)]
 		
 	##~~ Softwareupdate hook
 	def get_update_information(self):
