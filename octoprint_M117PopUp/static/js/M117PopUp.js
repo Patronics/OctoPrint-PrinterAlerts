@@ -39,8 +39,8 @@ $(function() {
 		}
 		
 		self.onBeforeBinding = function() {
-            self.msgType = self.settingsViewModel.settings.plugins.M117PopUp.msgType();
-            self.autoClose = self.settingsViewModel.settings.plugins.M117PopUp.autoClose();
+            self.msgType(self.settingsViewModel.settings.plugins.M117PopUp.msgType());
+            self.autoClose(self.settingsViewModel.settings.plugins.M117PopUp.autoClose());
         }
 		
 		self.onEventSettingsUpdated = function (payload) {            
