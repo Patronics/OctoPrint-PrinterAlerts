@@ -17,6 +17,9 @@ https://github.com/jneilliii/OctoPrint-M117PopUp/archive/master.zip
 
 ###Changelog
 
+* Version 0.6.0 released 12/24/2016
+  * updated configuration model from the deprecated 3 tuple method.
+
 * Version 0.5.0 released 09/25/2016
   * added settings interface
   * new settings
