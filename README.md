@@ -25,3 +25,8 @@ https://github.com/jneilliii/OctoPrint-M117PopUp/archive/master.zip
   * new settings
     * Message Type: [type](https://sciactive.com/pnotify/#demos-simple) to be used for PNotify parameters.
     * Auto Close: if enabled pop up will disappear after a period of time.	
+	
+## Support My Efforts
+I programmed this plugin for fun and do my best effort to support those that have issues with it, please return the favor and support me.
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/jneilliii)
