@@ -9,13 +9,13 @@ Note: this plugin does NOT work with files on the SD card.
 ![screenshot](settings.png)
 
 
-###Setup
+### Setup
 
 Install via the bundled Plugin Manager or manually using this URL:
 
 https://github.com/jneilliii/OctoPrint-M117PopUp/archive/master.zip
 
-###Changelog
+### Changelog
 
 * Version 0.6.0 released 12/24/2016
   * updated configuration model from the deprecated 3 tuple method.
