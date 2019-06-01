@@ -1,8 +1,8 @@
-# OctoPrint-M117PopUp
+# OctoPrint-PrinterAlerts
 
-Octoprint plugin to send M117 gcode messages to OctoPrint's built in alerting system.
+Octoprint plugin to use OctoPrint's built in alerting system to notify users about "Printer Waiting for user" messages.
 
-Note: this plugin does NOT work with files on the SD card.
+Note: this plugin might NOT work with files on the SD card. (Untested)
 
 ![screenshot](screenshot.png)
 
@@ -13,20 +13,22 @@ Note: this plugin does NOT work with files on the SD card.
 
 Install via the bundled Plugin Manager or manually using this URL:
 
-https://github.com/jneilliii/OctoPrint-M117PopUp/archive/master.zip
+https://github.com/Patronics/OctoPrint-PrinterAlerts/archive/master.zip
 
 ### Changelog
 
-* Version 0.6.0 released 12/24/2016
+
+
+* Version 0.1.0 In development as of 6/1/2019
+   * Initial version modified from M117PopUp to PrinterAlerts. Implemented minimum functionality (no settings yet)
+
+* Version 0.0.6.0 released 12/24/2016
   * updated configuration model from the deprecated 3 tuple method.
 
-* Version 0.5.0 released 09/25/2016
+* Version 0.0.5.0 released 09/25/2016
   * added settings interface
   * new settings
     * Message Type: [type](https://sciactive.com/pnotify/#demos-simple) to be used for PNotify parameters.
-    * Auto Close: if enabled pop up will disappear after a period of time.	
-	
-## Support My Efforts
-I programmed this plugin for fun and do my best effort to support those that have issues with it, please return the favor and support me.
+    * Auto Close: if enabled pop up will disappear after a period of time.
 
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/jneilliii)
+Thanks to jneilliii for the M117PopUp plugin this was based on, you can access it at https://github.com/jneilliii/OctoPrint-M117PopUp/
