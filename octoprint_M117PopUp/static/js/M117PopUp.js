@@ -1,5 +1,5 @@
 $(function() {
-    function M117PopUpViewModel(parameters) {
+    function PrinterAlertsViewModel(parameters) {
         var self = this;
 		
 		self.settingsViewModel = parameters[0];
@@ -32,27 +32,27 @@ $(function() {
 				]);
 
 		self.onDataUpdaterPluginMessage = function(plugin, data) {
-            if (plugin != "M117PopUp") {
-				// console.log('Ignoring '+plugin);
+            if (plugin != "PrinterAlerts") {
+				 console.log('Ignoring '+plugin);
                 return;
             }
 			
 			if(data.type == "popup") {
 				// console.log(data.msg);
-				if(self.settingsViewModel.settings.plugins.M117PopUp.msgType() != "disabled"){
+				if(self.settingsViewModel.settings.plugins.PrinterAlerts.msgType() != "disabled"){
 					new PNotify({
-						title: 'M117 Pop Up Message',
+						title: 'Printer Alert',
 						text: data.msg,
-						type: self.settingsViewModel.settings.plugins.M117PopUp.msgType(),
-						hide: self.settingsViewModel.settings.plugins.M117PopUp.autoClose()
+						type: self.settingsViewModel.settings.plugins.PrinterAlerts.msgType(),
+						hide: self.settingsViewModel.settings.plugins.PrinterAlerts.autoClose()
 						});
 				}
 				if(self.enableSpeech() && ('speechSynthesis' in window)){
 					var msg = new SpeechSynthesisUtterance(data.msg);
-					msg.volume = self.settingsViewModel.settings.plugins.M117PopUp.speechVolume();
-					msg.pitch = self.settingsViewModel.settings.plugins.M117PopUp.speechPitch();
-					msg.rate = self.settingsViewModel.settings.plugins.M117PopUp.speechRate();
-					msg.voice = speechSynthesis.getVoices().filter(function(voice){return voice.name == self.settingsViewModel.settings.plugins.M117PopUp.speechVoice(); })[0];
+					msg.volume = self.settingsViewModel.settings.plugins.PrinterAlerts.speechVolume();
+					msg.pitch = self.settingsViewModel.settings.plugins.PrinterAlerts.speechPitch();
+					msg.rate = self.settingsViewModel.settings.plugins.PrinterAlerts.speechRate();
+					msg.voice = speechSynthesis.getVoices().filter(function(voice){return voice.name == self.settingsViewModel.settings.plugins.PrinterAlerts.speechVoice(); })[0];
 					speechSynthesis.cancel();
 					speechSynthesis.speak(msg);
 				}
@@ -60,27 +60,27 @@ $(function() {
 		}
 		
 		self.onBeforeBinding = function() {
-            self.msgType(self.settingsViewModel.settings.plugins.M117PopUp.msgType());
-            self.autoClose(self.settingsViewModel.settings.plugins.M117PopUp.autoClose());
-			self.enableSpeech(self.settingsViewModel.settings.plugins.M117PopUp.enableSpeech());
-			self.speechVoice(self.settingsViewModel.settings.plugins.M117PopUp.speechVoice());
-			self.speechVolume(self.settingsViewModel.settings.plugins.M117PopUp.speechVolume());
-			self.speechPitch(self.settingsViewModel.settings.plugins.M117PopUp.speechPitch());
-			self.speechRate(self.settingsViewModel.settings.plugins.M117PopUp.speechRate());
+            self.msgType(self.settingsViewModel.settings.plugins.PrinterAlerts.msgType());
+            self.autoClose(self.settingsViewModel.settings.plugins.PrinterAlerts.autoClose());
+			self.enableSpeech(self.settingsViewModel.settings.plugins.PrinterAlerts.enableSpeech());
+			self.speechVoice(self.settingsViewModel.settings.plugins.PrinterAlerts.speechVoice());
+			self.speechVolume(self.settingsViewModel.settings.plugins.PrinterAlerts.speechVolume());
+			self.speechPitch(self.settingsViewModel.settings.plugins.PrinterAlerts.speechPitch());
+			self.speechRate(self.settingsViewModel.settings.plugins.PrinterAlerts.speechRate());
         }
 		
 		self.onEventSettingsUpdated = function (payload) {            
-            self.msgType = self.settingsViewModel.settings.plugins.M117PopUp.msgType();
-            self.autoClose = self.settingsViewModel.settings.plugins.M117PopUp.autoClose();
-			self.enableSpeech(self.settingsViewModel.settings.plugins.M117PopUp.enableSpeech());
-			self.speechVoice(self.settingsViewModel.settings.plugins.M117PopUp.speechVoice());
-			self.speechVolume(self.settingsViewModel.settings.plugins.M117PopUp.speechVolume());
-			self.speechPitch(self.settingsViewModel.settings.plugins.M117PopUp.speechPitch());
-			self.speechRate(self.settingsViewModel.settings.plugins.M117PopUp.speechRate());
+            self.msgType = self.settingsViewModel.settings.plugins.PrinterAlerts.msgType();
+            self.autoClose = self.settingsViewModel.settings.plugins.PrinterAlerts.autoClose();
+			self.enableSpeech(self.settingsViewModel.settings.plugins.PrinterAlerts.enableSpeech());
+			self.speechVoice(self.settingsViewModel.settings.plugins.PrinterAlerts.speechVoice());
+			self.speechVolume(self.settingsViewModel.settings.plugins.PrinterAlerts.speechVolume());
+			self.speechPitch(self.settingsViewModel.settings.plugins.PrinterAlerts.speechPitch());
+			self.speechRate(self.settingsViewModel.settings.plugins.PrinterAlerts.speechRate());
         }
 		
 		self.testPopUp = function(data) {
-			self.onDataUpdaterPluginMessage("M117PopUp", {'msg':'M117 Pop up message example.','type':'popup'});
+			self.onDataUpdaterPluginMessage("PrinterAlertPopUp", {'msg':'Printer Alert Pop up message example.','type':'popup'});
 		}
 			
 		speechSynthesis.onvoiceschanged = function(e) {
@@ -97,7 +97,7 @@ $(function() {
     // information to the global variable OCTOPRINT_VIEWMODELS
     ADDITIONAL_VIEWMODELS.push([
         // This is the constructor to call for instantiating the plugin
-        M117PopUpViewModel,
+        PrinterAlertsViewModel,
 
         // This is a list of dependencies to inject into the plugin, the order which you request
         // here is the order in which the dependencies will be injected into your view model upon
@@ -105,6 +105,6 @@ $(function() {
         ["settingsViewModel"],
 
         // Finally, this is the list of selectors for all elements we want this view model to be bound to.
-        ["#settings_plugin_M117PopUp_form"]
+        ["#settings_plugin_PrinterAlerts_form"]
     ]);
 });
