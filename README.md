@@ -31,4 +31,4 @@ https://github.com/Patronics/OctoPrint-PrinterAlerts/archive/master.zip
     * Message Type: [type](https://sciactive.com/pnotify/#demos-simple) to be used for PNotify parameters.
     * Auto Close: if enabled pop up will disappear after a period of time.
 
-Thanks to jneilliii for the M117PopUp plugin this was based on, you can access it at https://github.com/jneilliii/OctoPrint-M117PopUp/
+Thanks to jneilliii for the M117PopUp plugin this was heavily based on, you can access it at https://github.com/jneilliii/OctoPrint-M117PopUp/
