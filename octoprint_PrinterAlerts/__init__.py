@@ -14,7 +14,7 @@ class PrinterAlerts(octoprint.plugin.AssetPlugin,
 	
 	##-- AssetPlugin hooks
 	def get_assets(self):
-		return dict(js=["js/M117PopUp.js"])
+		return dict(js=["js/PrinterAlerts.js"])
 		
 	##-- Settings hooks
 	def get_settings_defaults(self):
