@@ -10,7 +10,7 @@ class PrinterAlerts(octoprint.plugin.AssetPlugin,
 	def AlertWaitingForUser(self, comm, line, *args, **kwargs):
 		if "echo:busy: paused for user" in line:
 			self._plugin_manager.send_plugin_message(self._identifier, dict(type="popup", msg="Printer Paused for User"))
-			return
+		return line
 	
 	##-- AssetPlugin hooks
 	#def get_assets(self):
