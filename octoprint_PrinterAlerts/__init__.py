@@ -13,16 +13,16 @@ class PrinterAlerts(octoprint.plugin.AssetPlugin,
 		return line
 	
 	##-- AssetPlugin hooks
-	#def get_assets(self):
-	#	return dict(js=["js/M117PopUp.js"])
+	def get_assets(self):
+		return dict(js=["js/M117PopUp.js"])
 		
 	##-- Settings hooks
-	#def get_settings_defaults(self):
-	#	return dict(msgType="info",autoClose=True,enableSpeech=False,speechVoice="",speechVolume=1,speechPitch=1,speechRate=1)	
+	def get_settings_defaults(self):
+		return dict(msgType="info",autoClose=True,enableSpeech=False,speechVoice="",speechVolume=1,speechPitch=1,speechRate=1)	
 	
 	##-- Template hooks
-	#def get_template_configs(self):
-	#	return [dict(type="settings",custom_bindings=True)]
+	def get_template_configs(self):
+		return [dict(type="settings",custom_bindings=True)]
 		
 	##~~ Softwareupdate hook
 	def get_version(self):
