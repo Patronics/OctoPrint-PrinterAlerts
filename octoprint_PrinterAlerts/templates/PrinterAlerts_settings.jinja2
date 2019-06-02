@@ -1,30 +1,30 @@
-<h4>M117PopUp Settings</h4>
-<form class="form-horizontal" id="settings_plugin_M117PopUp_form">
+<h4>PrinterAlerts Settings</h4>
+<form class="form-horizontal" id="settings_plugin_PrinterAlerts_form">
 	<div class="control-group">
 		<label class="control-label">{{ _('Message Type') }}</label>
 		<div class="controls">
-			<select data-bind="options: msgTypes,optionsText: 'name',optionsValue: 'value',value: settingsViewModel.settings.plugins.M117PopUp.msgType"></select>
+			<select data-bind="options: msgTypes,optionsText: 'name',optionsValue: 'value',value: settingsViewModel.settings.plugins.PrinterAlerts.msgType"></select>
         </div>
     </div>
-	<div class="control-group" data-bind="visible: settingsViewModel.settings.plugins.M117PopUp.msgType() != 'disabled'">
+	<div class="control-group" data-bind="visible: settingsViewModel.settings.plugins.PrinterAlerts.msgType() != 'disabled'">
 		<label class="control-label">{{ _('Auto Close') }}</label>
 		<div class="controls">
-			<input type="checkbox" data-bind="checked: settingsViewModel.settings.plugins.M117PopUp.autoClose,enabled: settingsViewModel.settings.plugins.M117PopUp.msgType() != 'disabled'">
+			<input type="checkbox" data-bind="checked: settingsViewModel.settings.plugins.PrinterAlerts.autoClose,enabled: settingsViewModel.settings.plugins.PrinterAlerts.msgType() != 'disabled'">
         </div>
     </div>
 	<div class="control-group" data-bind="visible: true">
 		<label class="control-label">{{ _('Enable Speech') }}</label>
 		<div class="controls">
-			<input type="checkbox" data-bind="checked: settingsViewModel.settings.plugins.M117PopUp.enableSpeech">
+			<input type="checkbox" data-bind="checked: settingsViewModel.settings.plugins.PrinterAlerts.enableSpeech">
         </div>
     </div>
-	<div class="control-group" data-bind="visible: settingsViewModel.settings.plugins.M117PopUp.enableSpeech">
+	<div class="control-group" data-bind="visible: settingsViewModel.settings.plugins.PrinterAlerts.enableSpeech">
 		<label class="control-label">{{ _('Voice') }}</label>
 		<div class="controls">
-			<select data-bind="options: voices,optionsText: 'name',optionsValue: 'value',value: settingsViewModel.settings.plugins.M117PopUp.speechVoice"></select>
+			<select data-bind="options: voices,optionsText: 'name',optionsValue: 'value',value: settingsViewModel.settings.plugins.PrinterAlerts.speechVoice"></select>
         </div>
     </div>
-	<div class="control-group" data-bind="visible: settingsViewModel.settings.plugins.M117PopUp.enableSpeech">
+	<div class="control-group" data-bind="visible: settingsViewModel.settings.plugins.PrinterAlerts.enableSpeech">
 		<label class="control-label">{{ _('Volume') }}</label>
 		<div class="controls">
 			<div class="slider slider-horizontal" style="width: 165px;">
@@ -37,12 +37,12 @@
 					<div class="tooltip-arrow"></div>
 					<div class="tooltip-inner">100</div>
 				</div>
-				<input type="number" style="width: 153px; display: none;" data-bind="slider: {min: 0, max: 1, step: .1, value: settingsViewModel.settings.plugins.M117PopUp.speechVolume, tooltip: 'hide'}">
+				<input type="number" style="width: 153px; display: none;" data-bind="slider: {min: 0, max: 1, step: .1, value: settingsViewModel.settings.plugins.PrinterAlerts.speechVolume, tooltip: 'hide'}">
 			</div>
-			<div data-bind="text: settingsViewModel.settings.plugins.M117PopUp.speechVolume" style="display:inline;padding-left:20px;"></div>
+			<div data-bind="text: settingsViewModel.settings.plugins.PrinterAlerts.speechVolume" style="display:inline;padding-left:20px;"></div>
 		</div>
 	</div>
-	<div class="control-group" data-bind="visible: settingsViewModel.settings.plugins.M117PopUp.enableSpeech">
+	<div class="control-group" data-bind="visible: settingsViewModel.settings.plugins.PrinterAlerts.enableSpeech">
 		<label class="control-label">{{ _('Pitch') }}</label>
 		<div class="controls">
 			<div class="slider slider-horizontal" style="width: 165px;">
@@ -55,12 +55,12 @@
 					<div class="tooltip-arrow"></div>
 					<div class="tooltip-inner">100</div>
 				</div>
-				<input type="number" style="width: 153px; display: none;" data-bind="slider: {min: 0, max: 2, step: .1, value: settingsViewModel.settings.plugins.M117PopUp.speechPitch, tooltip: 'hide'}">
+				<input type="number" style="width: 153px; display: none;" data-bind="slider: {min: 0, max: 2, step: .1, value: settingsViewModel.settings.plugins.PrinterAlerts.speechPitch, tooltip: 'hide'}">
 			</div>
-			<div data-bind="text: settingsViewModel.settings.plugins.M117PopUp.speechPitch" style="display:inline;padding-left:20px;"></div>
+			<div data-bind="text: settingsViewModel.settings.plugins.PrinterAlerts.speechPitch" style="display:inline;padding-left:20px;"></div>
 		</div>
 	</div>
-	<div class="control-group" data-bind="visible: settingsViewModel.settings.plugins.M117PopUp.enableSpeech">
+	<div class="control-group" data-bind="visible: settingsViewModel.settings.plugins.PrinterAlerts.enableSpeech">
 		<label class="control-label">{{ _('Rate') }}</label>
 		<div class="controls">
 			<div class="slider slider-horizontal" style="width: 165px;">
@@ -73,9 +73,9 @@
 					<div class="tooltip-arrow"></div>
 					<div class="tooltip-inner">100</div>
 				</div>
-				<input type="number" style="width: 153px; display: none;" data-bind="slider: {min: .1, max: 10, step: .1, value: settingsViewModel.settings.plugins.M117PopUp.speechRate, tooltip: 'hide'}">
+				<input type="number" style="width: 153px; display: none;" data-bind="slider: {min: .1, max: 10, step: .1, value: settingsViewModel.settings.plugins.PrinterAlerts.speechRate, tooltip: 'hide'}">
 			</div>
-			<div data-bind="text: settingsViewModel.settings.plugins.M117PopUp.speechRate" style="display:inline;padding-left:20px;"></div>
+			<div data-bind="text: settingsViewModel.settings.plugins.PrinterAlerts.speechRate" style="display:inline;padding-left:20px;"></div>
 		</div>
 	</div>
 	<div class="control-group">
