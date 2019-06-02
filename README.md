@@ -18,6 +18,8 @@ https://github.com/Patronics/OctoPrint-PrinterAlerts/archive/master.zip
 ### Changelog
 
 
+* Version 0.7.3 Released on 6/2/2019
+  * First version to be functional and officially released
 
 * Version 0.7.0 In development as of 6/1/2019
    * Initial version modified from M117PopUp to PrinterAlerts. Implemented basic functionality
