@@ -17,6 +17,8 @@ https://github.com/Patronics/OctoPrint-PrinterAlerts/archive/master.zip
 
 ### Changelog
 
+* Version 0.7.4 Released on 6/2/2019
+  * Removed Nonfunctional Test Button
 
 * Version 0.7.3 Released on 6/2/2019
   * First version to be functional and officially released
