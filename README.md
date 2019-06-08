@@ -2,8 +2,6 @@
 
 Octoprint plugin to use OctoPrint's built in alerting system to notify users about "Printer Waiting for user" messages.
 
-Note: this plugin might NOT work with files on the SD card. (Untested)
-
 ![screenshot](screenshot.png)
 
 ![screenshot](settings.png)
@@ -27,7 +25,7 @@ https://github.com/Patronics/OctoPrint-PrinterAlerts/archive/master.zip
 * This plugin was designed to work with the Prusa i3 Mk3s MMU2 3D printer, and will likely work with other Prusa printers as well. 
 * It will work with any non-prusa printers that output the same message "echo:busy: paused for user" when waiting for user input
 * For other printers that have a different waiting for user message, create an issue on github, and I'll be happy to try to implement it for those messages as well
-
+* this plugin might NOT work with files on the SD card. (Untested)
 
 ### Changelog
 
