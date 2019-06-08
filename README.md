@@ -20,7 +20,7 @@ https://github.com/Patronics/OctoPrint-PrinterAlerts/archive/master.zip
 * Configurable alert severity, from "Error" and "Warning", to "Info", and "Sucess"
 * Set alerts to auto-hide, or to stay on screen
  * Note: For printer like the Prusas that repeatedly give the same message while waiting, I strongly recommend leaving this set to Auto Close.
-* Optionally can speak the alerts as well
+* Optionally can speak the alerts as well (not supported in all browsers)
 
 
 ### Compatibility 
