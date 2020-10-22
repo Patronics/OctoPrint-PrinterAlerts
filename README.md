@@ -26,8 +26,13 @@ https://github.com/Patronics/OctoPrint-PrinterAlerts/archive/master.zip
 * It will work with any non-prusa printers that output the same message "echo:busy: paused for user" when waiting for user input
 * For other printers that have a different waiting for user message, create an issue on github, and I'll be happy to try to implement it for those messages as well
 * this plugin might NOT work with files on the SD card. (Untested)
+*as of October 2020, it is compatible with both Python 2 and Python 3
 
 ### Changelog
+
+* Version 0.7.5 Released on 10/22/2020
+ * Add Python 3 compatibility string. Thanks to cp2004 for verifiying compatibility
+  *resolves issues #6, #8
 
 * Version 0.7.4 Released on 6/2/2019
   * Removed Nonfunctional Test Button
